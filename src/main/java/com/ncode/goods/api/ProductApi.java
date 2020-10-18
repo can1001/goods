@@ -1,15 +1,17 @@
 package com.ncode.goods.api;
 
+import com.ncode.goods.domain.entity.product.Product;
 import com.ncode.goods.repository.ProductRepository;
 import com.ncode.goods.service.ProductService;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @Api
 @RestController
-@RequestMapping("/v1/api")
+@RequestMapping("/v1/api/product")
 public class ProductApi {
 
     @Autowired
@@ -17,5 +19,11 @@ public class ProductApi {
 
     @Autowired
     ProductService productService;
+
+    @GetMapping("/list")
+    public Iterable<Product> getList() {
+        return productRepository.findAll();
+    }
+
 
 }

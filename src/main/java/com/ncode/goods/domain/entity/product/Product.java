@@ -4,6 +4,7 @@ import com.ncode.goods.domain.entity.AuditEntity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Setter
 @Getter
@@ -13,7 +14,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "PRODUCT")
-public class Product extends AuditEntity {
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,4 +22,7 @@ public class Product extends AuditEntity {
 
     private String productName;
 
+    private BigDecimal price;
+
+    private String dealProductYn;
 }
