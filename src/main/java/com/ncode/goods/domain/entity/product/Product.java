@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 @Getter
 @Builder
 @Entity
-@EqualsAndHashCode(of = "productId")
+@EqualsAndHashCode(of = "productCode")
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "PRODUCT")
