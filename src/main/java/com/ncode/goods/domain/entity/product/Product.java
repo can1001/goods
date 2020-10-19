@@ -1,6 +1,5 @@
 package com.ncode.goods.domain.entity.product;
 
-import com.ncode.goods.domain.entity.AuditEntity;
 import lombok.*;
 
 import javax.persistence.*;
@@ -18,11 +17,13 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long productId;
+    private int productCode;
 
     private String productName;
 
-    private BigDecimal price;
+    private String productDesc;
 
-    private String dealProductYn;
+    private BigDecimal productPrice;
+
+    private String productType;
 }
