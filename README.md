@@ -21,3 +21,4 @@ http://localhost:8080/swagger-ui.html#/
 
 # 클래스 다이어그램
 
+![스크린샷 2020-10-20 오전 2 59 11](https://user-images.githubusercontent.com/7550699/96493732-4fde1380-1280-11eb-8d74-aa03904834f0.png)
